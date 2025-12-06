@@ -71,7 +71,6 @@
 
     /* Navigation */
     .nav-menu {
-        display: none;
         position: fixed;
         left: -100%;
         top: 70px;
