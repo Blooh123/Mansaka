@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Mansaka Heritage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">Mansaka Heritage</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="culture.html" class="nav-link">Traditions & Culture</a></li>
+                <li><a href="livelihood.html" class="nav-link">Livelihood & Economy</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, rgba(184, 134, 11, 0.8), rgba(46, 125, 50, 0.8)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 400%22><rect fill=%22%23b8860b%22 width=%221200%22 height=%22400%22/></svg>');">
+        <div class="container">
+            <h1>Mansaka Heritage Gallery</h1>
+            <p>Visual Journey Through Mansaka Culture</p>
+        </div>
+    </section>
+
+    <!-- Gallery Categories -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Visual Documentation</h2>
+            <p class="section-description">Explore our collection of images documenting Mansaka traditions, clothing, crafts, landscapes, and cultural practices.</p>
+
+            <!-- Gallery Filter -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="clothing">Clothing & Ornaments</button>
+                <button class="filter-btn" data-filter="crafts">Traditional Crafts</button>
+                <button class="filter-btn" data-filter="landscape">Landscapes</button>
+                <button class="filter-btn" data-filter="celebrations">Celebrations</button>
+                <button class="filter-btn" data-filter="arts">Arts & Instruments</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Clothing & Ornaments -->
+                <div class="gallery-item" data-filter="clothing">
+                    <img src="images/clothing.png" alt="" class="content-img">
+                    <div class="gallery-overlay">
+                        <h3>Traditional Clothing</h3>
+                        <p>Traditional cloth with intricate woven patterns</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-filter="clothing">
+                    <img src="images/Beads.png" alt="" class="content-img">
+                    <div class="gallery-overlay">
+                        <h3>Beaded Necklaces</h3>
+                        <p>Handmade beaded Necklaces</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-filter="clothing">
+                    <img src="images/BeadBracelet.png" alt="" class="content-img">
+                    <div class="gallery-overlay">
+                        <h3>Beaded Bracelets</h3>
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-filter="clothing">
+                    <img src="images/Headdress.png" alt="" class="content-img">
+                    <div class="gallery-overlay">
+                        <h3>Ceremonial Headdress</h3>
+                        <p>Elaborate headpiece for special occasions</p>
+                    </div>
+                </div>
+
+                <!-- Traditional Crafts -->
+                <div class="gallery-item" data-filter="crafts">
+                    <img src="images/baskets.png" alt="" class="content-img">
+                    <div class="gallery-overlay">
+                        <h3>Woven Baskets</h3>
+                        <p>Intricately woven baskets from natural materials</p>
+                    </div>
+                </div>
+
+                <!-- <div class="gallery-item" data-filter="crafts">
+                    <div class="gallery-image-placeholder">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Traditional Textiles</h3>
+                        <p>Hand-woven fabrics with geometric patterns</p>
+                    </div>
+                </div> -->
+
+                <div class="gallery-item" data-filter="crafts">
+                    <img src="images/MetalWork.png" alt="" class="content-img">
+                    <div class="gallery-overlay">
+                        <h3>Metalwork</h3>
+                        <p>Brass bells and ornamental metalwork</p>
+                    </div>
+                </div>
+
+                <!-- <div class="gallery-item" data-filter="crafts">
+                    <div class="gallery-image-placeholder">
+                        <i class="fas fa-pottery"></i>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Pottery Vessels</h3>
+                        <p>Hand-formed ceramic vessels for daily use</p>
+                    </div>
+                </div> -->
+
+                <!-- Landscapes -->
+                <div class="gallery-item" data-filter="landscape">
+                    <img src="images/sapa.png" alt="" class="content-img">
+                    <div class="gallery-overlay">
+                        <h3>Mountain Terrain</h3>
+                        <p>Ancestral homeland in Davao de Oro mountains</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-filter="landscape">
+                    <img src="images/mountain.png" alt="" class="content-img">
+                    <div class="gallery-overlay">
+                        <h3>Rainforest Resources</h3>
+                        <p>Dense forests rich in biodiversity and resources</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-filter="landscape">
+                    <img src="images/mainetHotSpring.png" alt="" class="content-img">
+                    <div class="gallery-overlay">
+                        <h3>River Communities</h3>
+                        <p>Settlement areas near water sources</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-filter="landscape">
+                    <img src="images/AgriCulturalLands.png" alt="" class="content-img">
+                    <div class="gallery-overlay">
+                        <h3>Agricultural Lands</h3>
+                        <p>Traditional farming areas and terraced fields</p>
+                    </div>
+                </div>
+
+                <!-- Celebrations -->
+                <div class="gallery-item" data-filter="celebrations">
+                    <img src="images/fiestivalMusic.png" alt="" class="content-img">
+                    <div class="gallery-overlay">
+                        <h3>Festival Music</h3>
+                        <p>Traditional musicians performing at celebrations</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-filter="celebrations">
+                    <img src="images/Fiestival.png" alt="" class="content-img">
+                    <div class="gallery-overlay">
+                        <h3>Community Gathering</h3>
+                        <p>Mansaka people gathered for celebration</p>
+                    </div>
+                </div>
+
+        
+
+                <!-- Arts & Instruments -->
+                <div class="gallery-item" data-filter="arts">
+                    <img src="images/drums.png" alt="" class="content-img">
+                    <div class="gallery-overlay">
+                        <h3>Traditional Drums</h3>
+                        <p>Percussion instruments for ceremonies</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-filter="arts">
+                    <img src="images/gong2.png" alt="" class="content-img">
+                    <div class="gallery-overlay">
+                        <h3>Gong (Agung)</h3>
+                        <p>Bronze gong with resonant ceremonial tones</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-filter="arts">
+                   <img src="images/Fluet.png" alt="" class="content-img">
+                    <div class="gallery-overlay">
+                        <h3>Bamboo Flute</h3>
+                        <p>Handmade wind instrument with melodic qualities</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-filter="arts">
+                    <img src="images/dance.png" alt="" class="content-img">
+                    <div class="gallery-overlay">
+                        <h3>Traditional Dance</h3>
+                        <p>Dancers performing ritual movements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Submission Section -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Share Your Documentation</h2>
+            <p>If you have photographs or documentation of Mansaka culture, heritage, or have conducted research, we welcome submissions for our gallery. Your contributions help preserve and share this important cultural heritage.</p>
+            
+            <div class="submission-box">
+                <div class="submission-item">
+                    <h3>Photo Contributions</h3>
+                    <p>Send high-quality photographs of Mansaka traditions, arts, crafts, or landscapes for consideration in our gallery.</p>
+                </div>
+                <div class="submission-item">
+                    <h3>Research Collaboration</h3>
+                    <p>Researchers and documentarians are invited to collaborate on preserving cultural records.</p>
+                </div>
+                <div class="submission-item">
+                    <h3>Cultural Documentation</h3>
+                    <p>Videos, audio recordings, or written documentation of cultural practices are valuable contributions.</p>
+                </div>
+            </div>
+
+            <a href="contact.html" class="btn btn-primary">Submit Your Materials</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Mansaka Heritage</h4>
+                    <p>This website is dedicated to preserving and promoting the cultural heritage of the Mansaka Indigenous Group of the Philippines. We aim to educate, inform, and inspire cultural appreciation.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="culture.html">Traditions</a></li>
+                        <li><a href="language.html">Language</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                 
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mansaka Heritage Website. All rights reserved. Dedicated to cultural preservation and education.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

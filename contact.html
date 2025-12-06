@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Mansaka Heritage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">Mansaka Heritage</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="culture.html" class="nav-link">Traditions & Culture</a></li>
+                <li><a href="livelihood.html" class="nav-link">Livelihood & Economy</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, rgba(46, 125, 50, 0.8), rgba(139, 69, 19, 0.8)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 400%22><rect fill=%22%232e7d32%22 width=%221200%22 height=%22400%22/></svg>');">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Connect with Us for Cultural Exchange & Collaboration</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>We would love to hear from researchers, educators, culture advocates, and anyone interested in learning more about the Mansaka Indigenous Group. Use the form below or contact us through any of the following methods.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <h4>Location</h4>
+                                <p>Davao de Oro Province<br>Compostela Valley Region<br>Mindanao, Philippines</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:info@mansakaheritage.org">info@mansakaheritage.org</a></p>
+                                <p><a href="mailto:research@mansakaheritage.org">research@mansakaheritage.org</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <h4>Phone</h4>
+                                <p>+63 (087) XXX-XXXX<br>Available for inquiries and consultations</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <h4>Office Hours</h4>
+                                <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Philippine Standard Time (PST)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h2>Send us a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+63 XXX XXX XXXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="research">Research Inquiry</option>
+                                <option value="educational">Educational Use</option>
+                                <option value="collaboration">Collaboration Opportunity</option>
+                                <option value="cultural">Cultural Documentation</option>
+                                <option value="submission">Photo/Resource Submission</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="organization">Organization/Institution (Optional)</label>
+                            <input type="text" id="organization" name="organization" placeholder="Your organization">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Your message..."></textarea>
+                        </div>
+
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="subscribe" name="subscribe">
+                            <label for="subscribe">Subscribe to updates about Mansaka heritage and cultural events</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Inquiry Section -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <h2 class="section-title">We Welcome Inquiries From</h2>
+            <div class="inquiry-grid">
+                <div class="inquiry-card">
+                    <div class="inquiry-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Educators & Students</h3>
+                    <p>Teachers using our materials for curriculum development or students researching indigenous cultures.</p>
+                </div>
+
+                <div class="inquiry-card">
+                    <div class="inquiry-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Researchers & Scholars</h3>
+                    <p>Academic researchers studying indigenous languages, cultures, and ethnography.</p>
+                </div>
+
+                <div class="inquiry-card">
+                    <div class="inquiry-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Documentary Makers</h3>
+                    <p>Filmmakers and content creators interested in Mansaka heritage documentation.</p>
+                </div>
+
+                <div class="inquiry-card">
+                    <div class="inquiry-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Cultural Organizations</h3>
+                    <p>NGOs and organizations working on indigenous rights and cultural preservation.</p>
+                </div>
+
+                <div class="inquiry-card">
+                    <div class="inquiry-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Members</h3>
+                    <p>Mansaka people and community members wanting to contribute or collaborate.</p>
+                </div>
+
+                <div class="inquiry-card">
+                    <div class="inquiry-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Cultural Enthusiasts</h3>
+                    <p>Anyone passionate about learning about and supporting indigenous heritage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How can I use Mansaka cultural materials for educational purposes?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can freely use our educational materials for classroom teaching with proper attribution. For specific research or publication, please contact us for permission and citation guidelines.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can I submit my own research or photographs?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We welcome research contributions, photographs, videos, and documentation from researchers, artists, and community members. Please contact us through the submission email with details about your materials.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How can I learn the Mansaka language?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide basic language resources on our language page. For comprehensive learning, contact local Mansaka communities or cultural organizations that offer language classes and immersion programs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Is there an organization working on Mansaka cultural preservation?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, several organizations work on indigenous rights and cultural preservation in the Philippines. Contact us for information about local community organizations and national initiatives.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can groups visit or learn directly from Mansaka communities?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Cultural visits and educational exchanges can be arranged respectfully. Please contact us to discuss your group's interests, and we can facilitate proper introductions and protocols.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How can I support Mansaka cultural preservation efforts?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can support through education, sharing our resources, making donations to cultural organizations, engaging respectfully with communities, and advocating for indigenous rights and cultural preservation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sources & References -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Academic Sources & References</h2>
+            <p>This website draws information from academic research, linguistic studies, anthropological documentation, and direct engagement with Mansaka communities. We are committed to accuracy and cultural respect.</p>
+            
+            <div class="sources-grid">
+                <div class="source-card">
+                    <h4>Linguistic Research</h4>
+                    <ul>
+                        <li>Ethnologue Language Database</li>
+                        <li>Philippine Languages Project</li>
+                        <li>Mansaka Language Documentation Archives</li>
+                    </ul>
+                </div>
+
+                <div class="source-card">
+                    <h4>Anthropological Studies</h4>
+                    <ul>
+                        <li>Lumad Cultural Heritage Documentation</li>
+                        <li>Indigenous Peoples of Mindanao Research</li>
+                        <li>Philippine Ethnography Archives</li>
+                    </ul>
+                </div>
+
+                <div class="source-card">
+                    <h4>Cultural Organizations</h4>
+                    <ul>
+                        <li>Philippine Indigenous Peoples Organizations</li>
+                        <li>Davao Region Cultural Centers</li>
+                        <li>National Commission on Indigenous Peoples (NCIP)</li>
+                    </ul>
+                </div>
+
+                <div class="source-card">
+                    <h4>Government Resources</h4>
+                    <ul>
+                        <li>Philippine Census of Population & Housing</li>
+                        <li>Davao de Oro Provincial Records</li>
+                        <li>Cultural Heritage Documentation Programs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Mansaka Heritage</h4>
+                    <p>This website is dedicated to preserving and promoting the cultural heritage of the Mansaka Indigenous Group of the Philippines. We aim to educate, inform, and inspire cultural appreciation.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="culture.html">Traditions</a></li>
+                        <li><a href="language.html">Language</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#sources">Academic Sources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mansaka Heritage Website. All rights reserved. Dedicated to cultural preservation and education.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
