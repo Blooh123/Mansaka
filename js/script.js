@@ -159,6 +159,81 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ============================================
+// TOUCH-FRIENDLY NAV LINKS (tap vs swipe)
+// Ensures small taps on horizontally scrolling nav trigger navigation
+// while swipes still scroll the menu.
+// ============================================
+if (navLinks && navLinks.length) {
+    navLinks.forEach(link => {
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchMoved = false;
+
+        link.addEventListener('touchstart', function (e) {
+            touchMoved = false;
+            const t = e.touches && e.touches[0];
+            if (t) {
+                touchStartX = t.clientX;
+                touchStartY = t.clientY;
+            }
+        }, {passive: true});
+
+        link.addEventListener('touchmove', function (e) {
+            const t = e.touches && e.touches[0];
+            if (!t) return;
+            const dx = Math.abs(t.clientX - touchStartX);
+            const dy = Math.abs(t.clientY - touchStartY);
+            // Consider it a move if horizontal movement exceeds 8px
+            if (dx > 8 || dy > 8) touchMoved = true;
+        }, {passive: true});
+
+        link.addEventListener('touchend', function (e) {
+            // If it wasn't a move (a tap), follow the link programmatically
+            if (!touchMoved) {
+                const href = link.getAttribute('href');
+                if (href && href.trim() !== '') {
+                    // Allow normal navigation for external links
+                    // If the nav is within a collapsed menu, close it then navigate
+                    const navbar = document.querySelector('.navbar');
+                    if (navbar && navbar.classList.contains('nav-open')) {
+                        navbar.classList.remove('nav-open');
+                        const toggle = navbar.querySelector('.nav-toggle');
+                        if (toggle) toggle.classList.remove('open');
+                        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+                    }
+                    window.location.href = href;
+                }
+            }
+        });
+    });
+}
+
+// Nav toggle button handling
+const navToggle = document.querySelectorAll('.nav-toggle');
+navToggle.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        const navbar = btn.closest('.navbar');
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        btn.classList.toggle('open', !expanded);
+        if (navbar) navbar.classList.toggle('nav-open', !expanded);
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    const openNav = document.querySelector('.navbar.nav-open');
+    if (!openNav) return;
+    if (e.target.closest('.navbar')) return; // click inside
+    openNav.classList.remove('nav-open');
+    const toggle = openNav.querySelector('.nav-toggle');
+    if (toggle) {
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+    }
+});
+
+// ============================================
 // SCROLL ANIMATIONS
 // ============================================
 
@@ -234,56 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // SCROLL TO TOP BUTTON
 // ============================================
 
-// Create scroll to top button
-const scrollToTopBtn = document.createElement('button');
-scrollToTopBtn.id = 'scrollToTop';
-scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-scrollToTopBtn.style.cssText = `
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #b8860b;
-    color: #8b4513;
-    border: none;
-    padding: 12px 16px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.2rem;
-    display: none;
-    z-index: 999;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
-`;
-
-document.body.appendChild(scrollToTopBtn);
-
-// Show/hide scroll to top button
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollToTopBtn.style.display = 'block';
-    } else {
-        scrollToTopBtn.style.display = 'none';
-    }
-});
-
-// Scroll to top when clicked
-scrollToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-// Hover effect for scroll to top button
-scrollToTopBtn.addEventListener('mouseenter', () => {
-    scrollToTopBtn.style.transform = 'scale(1.1)';
-    scrollToTopBtn.style.backgroundColor = '#daa520';
-});
-
-scrollToTopBtn.addEventListener('mouseleave', () => {
-    scrollToTopBtn.style.transform = 'scale(1)';
-    scrollToTopBtn.style.backgroundColor = '#b8860b';
-});
+// Scroll-to-top button is defined in HTML with id="scrollToTop"; we'll reference it later.
 
 // ============================================
 // FORM VALIDATION
@@ -335,7 +361,11 @@ if ('IntersectionObserver' in window) {
 
 const iframes = document.querySelectorAll('iframe[src*="youtube.com"]');
 iframes.forEach(iframe => {
+    // If the iframe is already inside a `.video-container` or responsive wrapper, skip wrapping
+    if (iframe.closest('.video-container') || iframe.closest('.responsive-embed')) return;
+
     const container = document.createElement('div');
+    container.className = 'responsive-embed';
     container.style.cssText = 'position: relative; width: 100%; padding-bottom: 56.25%;';
     iframe.style.cssText = 'position: absolute; top: 0; left: 0; width: 100%; height: 100%;';
     iframe.parentNode.insertBefore(container, iframe);

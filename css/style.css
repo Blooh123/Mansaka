@@ -2,6 +2,8 @@
    MANSAKA HERITAGE WEBSITE - MAIN STYLESHEET
    ============================================ */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@600;700;800&display=swap');
+
 /* Color Palette - Enhanced Mansaka Colors */
 :root {
     --primary-brown: #8b4513;
@@ -35,7 +37,7 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     background-color: #ffffff;
@@ -54,7 +56,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
     color: var(--primary-brown);
-    font-weight: 600;
+    font-weight: 700;
+    font-family: 'Montserrat', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
 h1 {
@@ -162,6 +165,59 @@ a:hover {
     align-items: center;
 }
 
+/* Small polish: make brand text align nicely with nav links */
+.brand { display: flex; align-items: center; gap: 0.5rem; }
+.brand .brand-text { line-height: 1; }
+.brand .tagline { font-size: 0.85rem; opacity: 0.9; }
+
+/* Nav toggle (hidden on desktop) */
+.nav-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 36px;
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.nav-toggle-icon {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: var(--primary-brown);
+    position: relative;
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background: var(--primary-brown);
+}
+
+.nav-toggle-icon::before { top: -6px; }
+.nav-toggle-icon::after { top: 6px; }
+
+/* When nav is open, animate icon to X */
+.nav-toggle.open .nav-toggle-icon {
+    background: transparent;
+}
+.nav-toggle.open .nav-toggle-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+.nav-toggle.open .nav-toggle-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
 .nav-link {
     font-weight: 600;
     color: var(--text-dark);
@@ -261,6 +317,27 @@ a:hover {
         padding-top: 56.25%;
         box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
+}
+
+/* Video grid for multiple videos: stack on small, two columns on larger screens */
+.video-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    align-items: start;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 900px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* When .video-container appears inside .video-grid, let it fill the cell */
+.video-grid .video-container {
+    max-width: 100%;
+    margin: 0;
 }
 
 .hero-content {

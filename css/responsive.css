@@ -226,12 +226,13 @@
         padding: 0 15px;
     }
 
-    /* Navbar */
+    /* Navbar — place brand and toggle on one row, dropdown below */
     .navbar .container {
-        padding: 1rem 15px;
+        padding: 0.75rem 15px;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         gap: 0.5rem;
     }
 
@@ -239,23 +240,39 @@
         font-size: 1.2rem;
     }
 
-    /* Make the nav row horizontally scrollable for small screens
-       while keeping the brand stacked above it. This prevents
-       menu wrapping from creating very tall headers and allows
-       thumb-scrolling to access all links. */
+    /* Mobile dropdown nav: show toggle and collapse menu by default */
+    .nav-toggle { display: inline-flex; margin-left: 1rem; z-index: 1200; }
+
     .nav-menu {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        gap: 0.6rem;
-        padding: 0.4rem 0;
+        display: none;
+        flex-direction: column;
         width: 100%;
-        white-space: nowrap;
+        gap: 0.5rem;
+        padding: 0.6rem 0;
+        background: transparent;
+        order: 2;
+        z-index: 1100;
     }
 
-    .nav-menu li {
-        flex: 0 0 auto;
+    .nav-menu li { width: 100%; }
+
+    .nav-menu .nav-link {
+        display: block;
+        width: 100%;
+        padding: 0.6rem 0.75rem;
+        border-radius: 8px;
+        background: rgba(255,255,255,0.02);
+    }
+
+    /* When nav is opened (class on navbar), show the menu with a small slide */
+    .navbar.nav-open .nav-menu {
+        display: flex;
+        animation: slideDown 180ms ease-out;
+    }
+
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-6px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 
     /* Hide default scrollbar but keep accessibility */
