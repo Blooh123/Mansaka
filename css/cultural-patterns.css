@@ -1,0 +1,776 @@
+/* ============================================
+   MANSAKA CULTURAL PATTERNS & INDIGENOUS DESIGNS
+   ============================================ */
+
+/* SVG Pattern Assets */
+
+/* Geometric Diamond Pattern (Tribal) */
+.pattern-diamond {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="diamond" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M20,5 L35,20 L20,35 L5,20 Z" fill="none" stroke="%23b8860b" stroke-width="1.5" opacity="0.6"/></pattern></defs><rect width="100" height="100" fill="%23f5f1e8" /><rect width="100" height="100" fill="url(%23diamond)" /></svg>');
+    background-repeat: repeat;
+}
+
+/* Zigzag Pattern (Textile Inspired) */
+.pattern-zigzag {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="zigzag" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"><polyline points="0,15 7.5,7.5 15,15 22.5,7.5 30,15" fill="none" stroke="%238b4513" stroke-width="1.2" opacity="0.5"/></pattern></defs><rect width="100" height="100" fill="%23ffffff" /><rect width="100" height="100" fill="url(%23zigzag)" /></svg>');
+    background-repeat: repeat;
+}
+
+/* Woven Lines Pattern */
+.pattern-woven {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="woven" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="50" y2="50" stroke="%23b8860b" stroke-width="1" opacity="0.4"/><line x1="50" y1="0" x2="0" y2="50" stroke="%23b8860b" stroke-width="1" opacity="0.4"/></pattern></defs><rect width="100" height="100" fill="%23f5f1e8" /><rect width="100" height="100" fill="url(%23woven)" /></svg>');
+    background-repeat: repeat;
+}
+
+/* Geometric Squares Pattern */
+.pattern-squares {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="squares" x="0" y="0" width="35" height="35" patternUnits="userSpaceOnUse"><rect x="5" y="5" width="25" height="25" fill="none" stroke="%238b4513" stroke-width="1" opacity="0.5"/></pattern></defs><rect width="100" height="100" fill="%23ffffff" /><rect width="100" height="100" fill="url(%23squares)" /></svg>');
+    background-repeat: repeat;
+}
+
+/* Dot Pattern (Traditional Beads) */
+.pattern-dots {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse"><circle cx="12.5" cy="12.5" r="2" fill="%23b8860b" opacity="0.6"/></pattern></defs><rect width="100" height="100" fill="%23f5f1e8" /><rect width="100" height="100" fill="url(%23dots)" /></svg>');
+    background-repeat: repeat;
+}
+
+/* Tribal Line Pattern */
+.pattern-lines {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="lines" x="0" y="0" width="10" height="20" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="20" stroke="%238b4513" stroke-width="1.5" opacity="0.4"/></pattern></defs><rect width="100" height="100" fill="%23ffffff" /><rect width="100" height="100" fill="url(%23lines)" /></svg>');
+    background-repeat: repeat;
+}
+
+/* Mansaka Color Palette - Enhanced */
+:root {
+    --mansaka-deep-red: #8b1e23;
+    --mansaka-maroon: #a02333;
+    --mansaka-earth-brown: #6b4423;
+    --mansaka-gold: #b8860b;
+    --mansaka-ochre: #d4af37;
+    --mansaka-forest-green: #2d5a2d;
+    --mansaka-black: #1a1a1a;
+    --mansaka-cream: #f5f1e8;
+    --mansaka-light-tan: #e8dcc8;
+}
+
+/* ============================================
+   WOVEN BORDER SEPARATOR
+   ============================================ */
+
+.woven-border {
+    height: 8px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--mansaka-earth-brown) 0px,
+        var(--mansaka-earth-brown) 15px,
+        var(--mansaka-gold) 15px,
+        var(--mansaka-gold) 30px,
+        var(--mansaka-forest-green) 30px,
+        var(--mansaka-forest-green) 45px
+    );
+    position: relative;
+}
+
+.woven-border::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 8"><defs><pattern id="weave" x="0" y="0" width="20" height="8" patternUnits="userSpaceOnUse"><path d="M0,4 Q5,0 10,4 T20,4" stroke="%23ffffff" stroke-width="0.5" fill="none" opacity="0.4"/></pattern></defs><rect width="100" height="8" fill="url(%23weave)" /></svg>');
+    opacity: 0.6;
+}
+
+/* ============================================
+   DAGMAY-INSPIRED PATTERN STRIP
+   ============================================ */
+
+.page-pattern-strip {
+    height: 12px;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--mansaka-deep-red),
+        var(--mansaka-deep-red) 8px,
+        var(--mansaka-earth-brown) 8px,
+        var(--mansaka-earth-brown) 16px,
+        var(--mansaka-gold) 16px,
+        var(--mansaka-gold) 24px
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+.page-pattern-strip::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 255, 255, 0.1) 2px,
+        rgba(255, 255, 255, 0.1) 4px
+    );
+    pointer-events: none;
+}
+
+/* ============================================
+   TRIBAL DIAMOND BACK-TO-TOP BUTTON
+   ============================================ */
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--mansaka-gold);
+    color: var(--mansaka-earth-brown);
+    border: none;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    z-index: 999;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    font-size: 1.5rem;
+}
+
+.scroll-to-top:hover {
+    background: var(--mansaka-ochre);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.scroll-to-top.show {
+    display: flex;
+}
+
+/* ============================================
+   SECTION HEADER WITH PATTERN ACCENT
+   ============================================ */
+
+.section-header {
+    position: relative;
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--mansaka-earth-brown);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--mansaka-gold), var(--mansaka-ochre), var(--mansaka-gold));
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+.section-header p {
+    color: var(--mansaka-earth-brown);
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    opacity: 0.85;
+}
+
+/* ============================================
+   HERO CARD WITH INDIGENOUS PATTERN
+   ============================================ */
+
+.hero-card {
+    background: linear-gradient(135deg, var(--mansaka-earth-brown), var(--mansaka-dark-brown));
+    border-top: 5px solid var(--mansaka-gold);
+    border-left: 5px solid var(--mansaka-deep-red);
+    padding: 2.5rem;
+    border-radius: 8px;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,10 L90,50 L50,90 L10,50 Z" fill="none" stroke="%23b8860b" stroke-width="1" opacity="0.15"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.3;
+}
+
+.hero-card h3 {
+    color: var(--mansaka-gold);
+    position: relative;
+    z-index: 1;
+}
+
+.hero-card p {
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   DECORATIVE ACCENT ELEMENTS
+   ============================================ */
+
+.accent-diamond-left {
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 30px solid var(--mansaka-gold);
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    opacity: 0.3;
+}
+
+.accent-diamond-right {
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-right: 30px solid var(--mansaka-forest-green);
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    opacity: 0.3;
+}
+
+.accent-triangle {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 35px solid var(--mansaka-deep-red);
+    opacity: 0.2;
+}
+
+/* ============================================
+   CULTURAL ICON STYLES
+   ============================================ */
+
+.cultural-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--mansaka-gold), var(--mansaka-ochre));
+    border-radius: 50%;
+    color: var(--mansaka-earth-brown);
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
+}
+
+.cultural-icon.green {
+    background: linear-gradient(135deg, var(--mansaka-forest-green), #3d7a3d);
+    color: #ffffff;
+}
+
+.cultural-icon.red {
+    background: linear-gradient(135deg, var(--mansaka-deep-red), var(--mansaka-maroon));
+    color: #ffffff;
+}
+
+/* ============================================
+   WOVEN BORDER HORIZONTAL RULE
+   ============================================ */
+
+.woven-divider {
+    margin: 3rem 0;
+    height: 6px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--mansaka-earth-brown) 0px,
+        var(--mansaka-earth-brown) 10px,
+        var(--mansaka-gold) 10px,
+        var(--mansaka-gold) 20px,
+        var(--mansaka-forest-green) 20px,
+        var(--mansaka-forest-green) 30px,
+        var(--mansaka-deep-red) 30px,
+        var(--mansaka-deep-red) 40px
+    );
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.woven-divider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 6"><defs><pattern id="weave-div" x="0" y="0" width="20" height="6" patternUnits="userSpaceOnUse"><circle cx="10" cy="3" r="1.5" fill="%23ffffff" opacity="0.3"/></pattern></defs><rect width="100" height="6" fill="url(%23weave-div)" /></svg>');
+    opacity: 0.5;
+}
+
+/* ============================================
+   CARD WITH CULTURAL BORDER ACCENT
+   ============================================ */
+
+.cultural-card {
+    background: #ffffff;
+    border-top: 4px solid var(--mansaka-gold);
+    border-left: 3px solid var(--mansaka-deep-red);
+    border-right: 3px solid var(--mansaka-forest-green);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.cultural-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(184, 134, 11, 0.2);
+}
+
+.cultural-card::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 20px;
+    width: 30px;
+    height: 4px;
+    background: var(--mansaka-forest-green);
+}
+
+/* ============================================
+   TEXTURED BACKGROUND SECTIONS
+   ============================================ */
+
+.textured-bg-earth {
+    background: linear-gradient(135deg, #f5f1e8 0%, #ede5d7 100%);
+    background-attachment: fixed;
+    position: relative;
+}
+
+.textured-bg-earth::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise" /><feColorMatrix in="noise" type="saturate" values="0" /></filter><rect width="300" height="300" fill="%23000000" opacity="0.02" filter="url(%23noise)"/></svg>');
+    pointer-events: none;
+}
+
+/* ============================================
+   BORDER ACCENT STYLES
+   ============================================ */
+
+.left-gold-border {
+    border-left: 5px solid var(--mansaka-gold);
+    padding-left: 1.5rem;
+}
+
+.top-tribal-border {
+    border-top: 4px dashed var(--mansaka-deep-red);
+    padding-top: 1.5rem;
+}
+
+.bottom-woven-border {
+    border-bottom: 3px solid var(--mansaka-forest-green);
+    padding-bottom: 1.5rem;
+}
+
+/* ============================================
+   MODERN GLASS MORPHISM EFFECT
+   ============================================ */
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+}
+
+.glass-card h3 {
+    color: var(--mansaka-earth-brown);
+}
+
+/* ============================================
+   HIGHLIGHT BOX WITH TRIBAL ACCENT
+   ============================================ */
+
+.tribal-highlight {
+    background: linear-gradient(135deg, rgba(184, 134, 11, 0.1) 0%, rgba(184, 134, 11, 0.05) 100%);
+    border-left: 5px solid var(--mansaka-gold);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.tribal-highlight strong {
+    color: var(--mansaka-earth-brown);
+}
+
+/* ============================================
+   BUTTON ENHANCEMENTS WITH TRIBAL STYLE
+   ============================================ */
+
+.btn-tribal {
+    background: linear-gradient(135deg, var(--mansaka-earth-brown), var(--mansaka-dark-brown));
+    color: var(--mansaka-gold);
+    border: 2px solid var(--mansaka-gold);
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-tribal::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: var(--mansaka-gold);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+    z-index: -1;
+}
+
+.btn-tribal:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-tribal:hover {
+    color: var(--mansaka-earth-brown);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(184, 134, 11, 0.3);
+}
+
+/* ============================================
+   ENHANCED RESPONSIVE FOR PATTERNS
+   ============================================ */
+
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .cultural-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .page-pattern-strip {
+        height: 8px;
+    }
+
+    .woven-divider {
+        margin: 2rem 0;
+        height: 4px;
+    }
+}
+
+/* ============================================
+   ENHANCED BACKGROUND PATTERNS
+   ============================================ */
+
+/* Diagonal Stripe Pattern - Tribal Textile */
+.bg-diagonal-stripes {
+    background: repeating-linear-gradient(
+        45deg,
+        #f5f1e8,
+        #f5f1e8 10px,
+        rgba(184, 134, 11, 0.05) 10px,
+        rgba(184, 134, 11, 0.05) 20px
+    );
+}
+
+/* Cross Hatch Pattern */
+.bg-crosshatch {
+    background: 
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(139, 69, 19, 0.03) 2px, rgba(139, 69, 19, 0.03) 4px),
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(139, 69, 19, 0.03) 2px, rgba(139, 69, 19, 0.03) 4px);
+    background-color: #ffffff;
+}
+
+/* Gradient Wave Pattern */
+.bg-gradient-wave {
+    background: linear-gradient(135deg, #f5f1e8 0%, rgba(184, 134, 11, 0.08) 50%, #f5f1e8 100%);
+}
+
+/* Mansaka Earth Texture */
+.bg-earth-texture {
+    background-color: #ede5d7;
+    background-image: 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" result="noise" /></filter><rect width="200" height="200" fill="%23ede5d7" filter="url(%23noise)" opacity="0.1"/></svg>');
+}
+
+/* Gold Accent Pattern */
+.bg-gold-accent {
+    background: linear-gradient(90deg, transparent 0%, rgba(184, 134, 11, 0.1) 50%, transparent 100%);
+    background-size: 100% 100%;
+}
+
+/* Tribal Grid Pattern */
+.bg-tribal-grid {
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 30px, rgba(139, 69, 19, 0.05) 30px, rgba(139, 69, 19, 0.05) 31px),
+        repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(139, 69, 19, 0.05) 30px, rgba(139, 69, 19, 0.05) 31px);
+    background-color: #f5f1e8;
+}
+
+/* Apply patterns to sections */
+.intro-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f1e8 100%);
+}
+
+.intro-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="subtle-dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23b8860b" opacity="0.08"/></pattern></defs><rect width="100" height="100" fill="url(%23subtle-dots)" /></svg>');
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.highlights-section {
+    background: linear-gradient(180deg, #f0f0f0 0%, #ffffff 100%);
+}
+
+.highlights-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="fine-lines" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><line x1="0" y1="5" x2="10" y2="5" stroke="%238b4513" stroke-width="0.5" opacity="0.04"/></pattern></defs><rect width="100" height="100" fill="url(%23fine-lines)" /></svg>');
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.quick-info {
+    background: linear-gradient(135deg, #f5f1e8 0%, #ffffff 100%);
+}
+
+.explore-section {
+    background: linear-gradient(180deg, #f5f1e8 0%, #ede5d7 100%);
+}
+
+.video-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+}
+
+/* Section positioning for patterns */
+.intro-section,
+.highlights-section,
+.quick-info,
+.explore-section,
+.video-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-section > .container,
+.highlights-section > .container,
+.quick-info > .container,
+.explore-section > .container,
+.video-section > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Decorative corner elements */
+.section-corner-accent {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.section-corner-accent.top-left {
+    top: 0;
+    left: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M0,0 L100,0 L0,100 Z" fill="%23b8860b"/></svg>');
+}
+
+.section-corner-accent.bottom-right {
+    bottom: 0;
+    right: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M100,100 L0,100 L100,0 Z" fill="%232d5a2d"/></svg>');
+}
+
+/* Enhanced card styling with patterns */
+.cultural-card {
+    background: #ffffff;
+    border-top: 4px solid var(--mansaka-gold);
+    border-left: 3px solid var(--mansaka-deep-red);
+    border-right: 3px solid var(--mansaka-forest-green);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cultural-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M30,5 L50,25 L30,45 L10,25 Z" fill="%23b8860b" opacity="0.15"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Watermark-style elements */
+.watermark-pattern {
+    position: absolute;
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+.watermark-pattern.diagonal {
+    width: 300px;
+    height: 300px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><g stroke="%238b4513" stroke-width="2" fill="none"><path d="M0,150 Q75,100 150,150 T300,150"/><path d="M0,100 Q75,50 150,100 T300,100"/><path d="M0,200 Q75,150 150,200 T300,200"/></g></svg>');
+}
+
+/* ============================================
+   ADDITIONAL DESIGN PATTERNS (NEW)
+   ============================================ */
+
+/* Concentric Diamonds - subtle ceremonial motif */
+.pattern-concentric-diamonds {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="cd" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse"><g fill="none" stroke="%23b8860b" stroke-width="1"><path d="M25,5 L45,25 L25,45 L5,25 Z" opacity="0.12"/><path d="M25,12 L38,25 L25,38 L12,25 Z" opacity="0.18"/></g></pattern></defs><rect width="100" height="100" fill="%23f5f1e8"/><rect width="100" height="100" fill="url(%23cd)"/></svg>');
+    background-repeat: repeat;
+}
+
+/* Diagonal Fine Lines - subtle woven appearance */
+.pattern-diagonal-lines {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="diag" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M-2,2 l4,-4 M0,10 l10,-10 M8,12 l4,-4" stroke="%238b4513" stroke-width="0.6" opacity="0.06"/></pattern></defs><rect width="100" height="100" fill="%23ffffff"/><rect width="100" height="100" fill="url(%23diag)"/></svg>');
+    background-repeat: repeat;
+}
+
+/* Basket Weave - tight textile motif */
+.pattern-basket-weave {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><defs><pattern id="basket" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="10" height="10" fill="%23b8860b" opacity="0.08"/><rect x="10" y="10" width="10" height="10" fill="%232d5a2d" opacity="0.06"/></pattern></defs><rect width="80" height="80" fill="%23f5f1e8"/><rect width="80" height="80" fill="url(%23basket)"/></svg>');
+    background-repeat: repeat;
+}
+
+/* Stipple / Grain - for subtle texture on large areas */
+.pattern-stipple {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><pattern id="stp" width="4" height="4" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.6" fill="%238b4513" opacity="0.06"/></pattern></defs><rect width="40" height="40" fill="%23f5f1e8"/><rect width="40" height="40" fill="url(%23stp)"/></svg>');
+    background-repeat: repeat;
+}
+
+/* Sunburst / Radiant Motif - use sparingly as focal watermark */
+.pattern-sunburst {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><g fill="none" stroke="%23b8860b" stroke-width="1" opacity="0.08"><circle cx="100" cy="100" r="30"/><g stroke-width="0.9"><path d="M100,0 L100,50"/><path d="M100,150 L100,200"/><path d="M0,100 L50,100"/><path d="M150,100 L200,100"/><path d="M20,20 L60,60"/><path d="M140,140 L180,180"/></g></g></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+}
+
+/* Small grid / bead motif */
+.pattern-small-grid {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><pattern id="sg" width="10" height="10" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4" height="4" fill="%23b8860b" opacity="0.12"/></pattern></defs><rect width="20" height="20" fill="%23ffffff"/><rect width="20" height="20" fill="url(%23sg)"/></svg>');
+    background-repeat: repeat;
+}
+
+/* Utility classes to apply patterns with adjustable opacity */
+.bg-pattern { background-repeat: repeat; }
+.bg-pattern--soft { opacity: 0.45; }
+.bg-pattern--light { opacity: 0.22; }
+.pattern-swatch { display:inline-block; width:40px; height:24px; border-radius:4px; margin:0 6px; box-shadow:0 2px 6px rgba(0,0,0,0.08); }
+
+/* Example usage helpers */
+.has-pattern-diamond { background-image: inherit; }
+
+/* Apply patterns on `body` safely with low impact and mobile fallback */
+body.pattern-concentric-diamonds,
+body.pattern-diagonal-lines,
+body.pattern-basket-weave,
+body.pattern-stipple,
+body.pattern-small-grid,
+body.bg-tribal-grid,
+body.bg-diagonal-stripes {
+    background-color: var(--mansaka-cream);
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+/* Make patterns less visually dominant on mobile and avoid fixed backgrounds */
+@media (max-width: 768px) {
+    body.pattern-concentric-diamonds,
+    body.pattern-diagonal-lines,
+    body.pattern-basket-weave,
+    body.pattern-stipple,
+    body.pattern-small-grid,
+    body.bg-tribal-grid,
+    body.bg-diagonal-stripes {
+        background-attachment: scroll;
+        background-position: top left;
+    }
+}
+
+/* Optional subtle overlay for contrast when needed */
+body.pattern-overlay::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.04);
+    pointer-events: none;
+    z-index: 0;
+}
+

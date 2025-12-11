@@ -3,7 +3,6 @@
 // ============================================
 
 // DOM Elements
-const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 const filterBtns = document.querySelectorAll('.filter-btn');
@@ -14,34 +13,15 @@ const tabButtons = document.querySelectorAll('.tab-btn');
 const tabContents = document.querySelectorAll('.tab-content');
 
 // ============================================
-// NAVIGATION MENU TOGGLE
+// NAVIGATION - DROPDOWN APPROACH (No Hamburger)
 // ============================================
 
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
+// Toggle nav dropdown on smaller screens
+const navContainer = document.querySelector('.nav-menu');
+if (navContainer) {
+    // Simple responsive nav - items wrap naturally
+    // No hamburger, just responsive design
 }
-
-// Close menu when a link is clicked
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
-    });
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', (event) => {
-    const isClickInsideNav = navMenu.contains(event.target);
-    const isClickInsideHamburger = hamburger.contains(event.target);
-    
-    if (!isClickInsideNav && !isClickInsideHamburger && navMenu.classList.contains('active')) {
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
-    }
-});
 
 // ============================================
 // ACTIVE NAV LINK ON SCROLL
@@ -386,6 +366,31 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.opacity = '0';
     });
 });
+
+// ============================================
+// SCROLL TO TOP BUTTON
+// ============================================
+
+const scrollToTopBtn = document.getElementById('scrollToTop');
+
+// Show button when user scrolls down
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('show');
+    } else {
+        scrollToTopBtn.classList.remove('show');
+    }
+});
+
+// Scroll to top when button is clicked
+if (scrollToTopBtn) {
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
 
 // ============================================
 // CONSOLE MESSAGE

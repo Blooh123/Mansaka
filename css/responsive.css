@@ -71,31 +71,20 @@
 
     /* Navigation */
     .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background-color: #ffffff;
-        width: 100%;
-        text-align: left;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        gap: 0;
-        padding: 2rem 0;
-    }
-
-    .nav-menu.active {
-        left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0.5rem 0;
     }
 
     .nav-menu li {
-        width: 100%;
-        padding: 0;
+        flex: 0 1 auto;
     }
 
     .nav-link {
-        display: block;
-        padding: 1rem 2rem;
+        display: inline-block;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
         border: none;
     }
 
@@ -104,25 +93,14 @@
     }
 
     .nav-link.active {
-        background-color: var(--light-gray);
-        border-left: 4px solid var(--gold);
-        padding-left: calc(2rem - 4px);
+        background-color: var(--gold);
+        color: var(--primary-brown);
+        border-radius: 20px;
+        padding: 0.6rem 1rem;
     }
 
     .hamburger {
-        display: flex;
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(45deg) translate(-6px, -6px);
+        display: none;
     }
 
     /* Hero Section */
@@ -251,10 +229,59 @@
     /* Navbar */
     .navbar .container {
         padding: 1rem 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
     }
 
     .logo-text {
         font-size: 1.2rem;
+    }
+
+    /* Make the nav row horizontally scrollable for small screens
+       while keeping the brand stacked above it. This prevents
+       menu wrapping from creating very tall headers and allows
+       thumb-scrolling to access all links. */
+    .nav-menu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 0.6rem;
+        padding: 0.4rem 0;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .nav-menu li {
+        flex: 0 0 auto;
+    }
+
+    /* Hide default scrollbar but keep accessibility */
+    .nav-menu::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .nav-menu::-webkit-scrollbar-thumb {
+        background: rgba(44,44,44,0.12);
+        border-radius: 8px;
+    }
+
+    .nav-menu {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(44,44,44,0.12) transparent;
+    }
+
+    .nav-link {
+        white-space: nowrap;
+    }
+
+    @media (max-width: 360px) {
+        .nav-menu {
+            gap: 0.4rem;
+            padding: 0.35rem 0;
+        }
     }
 
     /* Hero Section */
@@ -420,6 +447,41 @@
         gap: 1.5rem;
     }
 
+    /* Header adjustments for small screens */
+    .navbar .container {
+        padding: 0.6rem 12px;
+        gap: 0.5rem;
+    }
+
+    .brand-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+    }
+
+    .logo-text {
+        font-size: 1rem;
+    }
+
+    .nav-menu {
+        justify-content: flex-end;
+        gap: 0.4rem;
+    }
+
+    @media (max-width: 360px) {
+        .nav-menu {
+            width: 100%;
+            justify-content: center;
+            gap: 0.3rem;
+            padding: 0.4rem 0;
+        }
+
+        .nav-link {
+            padding: 0.45rem 0.6rem;
+            font-size: 0.88rem;
+        }
+    }
+
     .footer-section h4 {
         font-size: 1.1rem;
     }
@@ -558,6 +620,27 @@
 @media (max-width: 480px) {
     .hide-mobile {
         display: none;
+    }
+}
+
+/* ============================================
+   ENHANCED MOBILE NAVIGATION STYLING
+   ============================================ */
+
+@media (max-width: 600px) {
+    .nav-menu {
+        gap: 0.3rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .nav-link.active {
+        background-color: var(--gold);
+        color: var(--primary-brown);
+        border-radius: 15px;
     }
 }
 
